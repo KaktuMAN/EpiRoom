@@ -16,6 +16,7 @@ function storeDataMultipleRooms(rooms: Room[], activity: Activity, roomsNames: s
       console.error(`Room ${roomName} not found in rooms list.`);
       return;
     }
+    if (room.activities.find((activity) => activity.id === activity.id)) return;
     room.activities.push(activity)
     room.activities.sort((a, b) => a.start.getTime() - b.start.getTime())
   })
