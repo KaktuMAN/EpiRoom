@@ -33,6 +33,22 @@
       ]
     },
     {
+      "room": "FR/LIL/Hopital-Militaire/S-21abc-22-DMR-Ada",
+      "linkedRooms": [
+        "FR/LIL/Hopital-Militaire/S-21a-Denis",
+        "FR/LIL/Hopital-Militaire/S-21b-MacAlistair",
+        "FR/LIL/Hopital-Militaire/S-21c-Ritchie",
+        "FR/LIL/Hopital-Militaire/S-22-Ada-Lovelace"
+      ]
+    },
+    {
+      "room": "FR/LIL/Hopital-Militaire/S-02-03-Pru-Ha-Mei-Hatsume",
+      "linkedRooms": [
+        "FR/LIL/Hopital-Militaire/S-02-Pru-Ha",
+        "FR/LIL/Hopital-Militaire/S-03-Mei-Hatsume"
+      ]
+    },
+    {
       "room": "FR/LIL/Hopital-Militaire/0-Tout-le-batiment",
       "linkedRooms": [
         "FR/LIL/Hopital-Militaire/B-01-Bulma",
