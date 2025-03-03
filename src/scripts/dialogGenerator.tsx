@@ -25,7 +25,7 @@ function generateRoomContent(room: Room) {
             </ListItemAvatar>
             {activity.active ?
               <ListItemText primary={activity.title} secondary={`Termine à ${formatTime(activity.end.getTime())}`}/> :
-              <ListItemText primary={activity.title} secondary={`Démarre à ${formatTime(activity.start.getTime())}`}/>
+              <ListItemText primary={activity.title} secondary={`${formatTime(activity.start.getTime())} - ${formatTime(activity.end.getTime())}`}/>
             }
           </ListItem>
         ))}
