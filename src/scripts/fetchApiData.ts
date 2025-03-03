@@ -47,38 +47,28 @@ export default function fetchApiData(townData: Town, setLoading: (loading: boole
     if (!data) return;
     setError(false)
     data.forEach((activityData: APIResponse) => {
-      if (!activityData.room && !activityData.location) return;
-      if (activityData.location) {
-        activityData.room = {code: activityData.location, seats: 0}
-      }
-      let room = newRooms.find((room) => room.intra_name === activityData.room?.code);
-      let activity: Activity = {title: "", start: new Date(), end: new Date(), id: "", active: false}
-
-      if (activityData.id_calendar) {
-        activity.title = activityData.title
-        activity.start = new Date(activityData.start)
-        activity.end = new Date(activityData.end)
-      } else {
-        activity.module_code = activityData.codemodule
-        activity.module_title = activityData.titlemodule
-        activity.title = activityData.acti_title?.replace("Réservation salle MSc - ", "") || activityData.title.replace("Réservation salle MSc - ", "")
-        activity.start = new Date(activityData.start)
-        activity.end = new Date(activityData.end)
-      }
-      activity.id = v3(`${activity.title}${activity.start.getTime()}`, v3.URL)
+      if (!activityData.room) return;
+      let room = newRooms.find((room) => room.intra_name === activityData.room);
+      let activity: Activity = {title: "", start: new Date(), end: new Date(), id: -1, active: false}
+      
+      activity.title = activityData.title?.replace("Réservation salle MSc - ", "")
+      activity.start = new Date(activityData.start)
+      activity.end = new Date(activityData.end)
+      
+      activity.id = activityData.event_id;
 
       if (activity.end.getTime() < new Date().getTime()) return;
 
       if (room === undefined) {
         townData.multipleRooms.forEach((multipleRooms) => {
-          if (multipleRooms.room === activityData.room?.code) {
+          if (multipleRooms.room === activityData.room) {
             storeDataMultipleRooms(newRooms, activity, multipleRooms.linkedRooms)
           }
         })
       }
 
       if (!room) {
-        console.warn(`Room ${activityData.room?.code} not found in rooms list.`);
+        console.warn(`Room ${activityData.room} not found in rooms list.`);
         return;
       } else if (room && room.no_status !== true) {
         room.activities.push(activity)
