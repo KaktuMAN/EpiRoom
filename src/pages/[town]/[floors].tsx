@@ -126,7 +126,7 @@ export default function FloorRender ({ townData }: FloorRenderProps) {
           {townData.rooms.map((room) => {
             if (room.floor != currentFloor) return;
             if (room.no_status === true) return;
-            return <RoomInformations room={room} key={room.intra_name} setDialogOpen={setDialogOpen} setDialogContent={setDialogContent}/>
+            return <RoomInformations room={room} key={`${room.intra_name}-info`} setDialogOpen={setDialogOpen} setDialogContent={setDialogContent}/>
           })}
         </Stack>
       </Stack>
@@ -160,7 +160,7 @@ export default function FloorRender ({ townData }: FloorRenderProps) {
               {townData.rooms.map((room) => {
                 if (room.floor != currentFloor) return;
                 if (room.no_status === true) return;
-                return <RoomInformations room={room} key={room.intra_name} setDialogOpen={setDialogOpen} setDialogContent={setDialogContent}/>
+                return <RoomInformations room={room} key={`${room.intra_name}-info`} setDialogOpen={setDialogOpen} setDialogContent={setDialogContent}/>
               })}
             </Stack>
           </Stack>
