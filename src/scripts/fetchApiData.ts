@@ -1,7 +1,6 @@
 import { Activity } from "@customTypes/activity";
 import { Room } from "@customTypes/room"
 import { Town } from "@customTypes/town"
-import { v3 } from "uuid"
 
 /**
  * Store data from API response in room object
@@ -52,19 +51,22 @@ export default function fetchApiData(townData: Town, setLoading: (loading: boole
       let activity: Activity = {title: "", start: new Date(), end: new Date(), id: -1, active: false}
       
       activity.title = activityData.title?.replace("Réservation salle MSc - ", "")
-      activity.start = new Date(activityData.start)
-      activity.end = new Date(activityData.end)
+      activity.start = new Date(activityData.start * 1000)
+      activity.end = new Date(activityData.end * 1000)
       
       activity.id = activityData.event_id;
 
       if (activity.end.getTime() < new Date().getTime()) return;
 
       if (room === undefined) {
+        let found = false;
         townData.multipleRooms.forEach((multipleRooms) => {
           if (multipleRooms.room === activityData.room) {
+            found = true;
             storeDataMultipleRooms(newRooms, activity, multipleRooms.linkedRooms)
           }
         })
+        if (found) return;
       }
 
       if (!room) {
