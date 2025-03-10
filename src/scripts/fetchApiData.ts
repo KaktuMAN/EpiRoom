@@ -52,7 +52,9 @@ export default function fetchApiData(townData: Town, setLoading: (loading: boole
       
       activity.title = activityData.title?.replace("Réservation salle MSc - ", "")
       activity.start = new Date(activityData.start * 1000)
+      activity.start = new Date(activity.start.getTime() + activity.start.getTimezoneOffset() * 60000)
       activity.end = new Date(activityData.end * 1000)
+      activity.end = new Date(activity.end.getTime() + activity.end.getTimezoneOffset() * 60000)
       
       activity.id = activityData.event_id;
 
