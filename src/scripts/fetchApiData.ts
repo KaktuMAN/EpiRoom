@@ -5,18 +5,18 @@ import { Town } from "@customTypes/town"
 /**
  * Store data from API response in room object
  * @param rooms
- * @param activity
+ * @param originalActivity
  * @param roomsNames
  */
-function storeDataMultipleRooms(rooms: Room[], activity: Activity, roomsNames: string[]): void {
+function storeDataMultipleRooms(rooms: Room[], originalActivity: Activity, roomsNames: string[]): void {
   roomsNames.forEach((roomName) => {
     let room = rooms.find((room) => room.intra_name === roomName)
     if (!room) {
       console.error(`Room ${roomName} not found in rooms list.`);
       return;
     }
-    if (room.activities.find((activity) => activity.id === activity.id)) return;
-    room.activities.push(activity)
+    if (room.activities.find((activity) => activity.id === originalActivity.id)) return;
+    room.activities.push(originalActivity)
     room.activities.sort((a, b) => a.start.getTime() - b.start.getTime())
   })
 }
