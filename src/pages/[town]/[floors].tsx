@@ -96,7 +96,7 @@ export default function FloorRender ({ townData }: FloorRenderProps) {
     };
   }, [townData, error]);
 
-  if (loading)
+  if (loading && !tvSettings)
     return (<><Head><title>EpiRooms</title></Head><Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh'}}><CircularProgress/></Box></>)
   return (
     <main style={{width: "100%", height: tvSettings ? "95%" : "100%"}} className={mobile ? "mobile" : ""}>
