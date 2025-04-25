@@ -26,10 +26,10 @@
       ]
     },
     {
-      "room": "FR/LIL/Hopital-Militaire/S-33ab-Deep-Blue-Brain",
+      "room": "FR/LIL/Hopital-Militaire/S-33bc-Blue-Brain",
       "linkedRooms": [
-        "FR/LIL/Hopital-Militaire/S-33a-Deep-Blue",
-        "FR/LIL/Hopital-Militaire/S-33b-Blue-Brain"
+        "FR/LIL/Hopital-Militaire/S-33b-Blue",
+        "FR/LIL/Hopital-Militaire/S-33c-Brain"
       ]
     },
     {
@@ -158,8 +158,7 @@
       "name":"B.13 - Kaer Morhen",
       "display_name":"Kaer Morhen",
       "seats": 7,
-      "floor": 1,
-      "no_status": true
+      "floor": 1
     },
     {
       "intra_name":"FR/LIL/Hopital-Militaire/B-14-La-Matrice",
@@ -243,7 +242,8 @@
       "name":"S.23a - Hedy Lamarr",
       "display_name":"Hedy Lamarr",
       "seats": 28,
-      "floor": 2
+      "floor": 2,
+      "no_status": true
     },
     {
       "intra_name":"FR/LIL/Hopital-Militaire/S-23b-Al-Jazari",
@@ -282,17 +282,25 @@
       "no_status": true
     },
     {
-      "intra_name":"FR/LIL/Hopital-Militaire/S-33a-Deep-Blue",
-      "name":"S.33a - Deep Blue",
-      "display_name":"Deep Blue",
+      "intra_name":"FR/LIL/Hopital-Militaire/S-33a-Deep",
+      "name":"S.33a - Deep",
+      "display_name":"Deep",
       "seats": 10,
       "floor": 3,
       "no_status": true
     },
     {
-      "intra_name":"FR/LIL/Hopital-Militaire/S-33b-Blue-Brain",
-      "name":"S.33b - Blue Brain",
-      "display_name":"Blue Brain",
+      "intra_name":"FR/LIL/Hopital-Militaire/S-33b-Blue",
+      "name":"S.33b - Blue",
+      "display_name":"Blue",
+      "seats": 10,
+      "floor": 3,
+      "no_status": true
+    },
+    {
+      "intra_name":"FR/LIL/Hopital-Militaire/S-33c-Brain",
+      "name":"S.33c - Brain",
+      "display_name":"Brain",
       "seats": 10,
       "floor": 3,
       "no_status": true
