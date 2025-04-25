@@ -16,22 +16,26 @@
         <rect x="215" y="123" width="140" height="140"/>
         <rect x="354" y="217" width="47.5" height="46"/>
       </g>
-      <g id="S-33a-Deep-Blue">
-        <path d="M 4 267 L 220 267 L 220 427 L 4 427 L 4 267 Z"/>
+      <g id="S-33a-Deep">
+        <path d="M 4 267 L 100 267 L 100 427 L 4 427 L 4 267 Z"/>
       </g>
-      <g id="S-33b-Blue-Brain">
-        <path d="M 220 267 L 414 267 L 414 427 L 220 427 L 220 267 Z"/>
+      <g id="S-33b-Blue">
+        <path d="M 220 267 L 100 267 L 100 427 L 317 427 L 314 267 Z"/>
+      </g>
+      <g id="S-33c-Brain">
+        <path d="M 220 267 L 314 267 L 314 427 L 414 427 L 414 267 Z"/>
       </g>
       <g id="B-31-TensorFlow-Text">
         <text x="286" y="200" font-family="Helvetica" font-size="16px" text-anchor="middle">TensorFlow</text>
       </g>
-      <g id="S-33a-Deep-Blue-Text">
-        <text x="76" y="348" font-family="Helvetica" font-size="16px" text-anchor="middle">Deep</text>
+      <g id="S-33a-Deep-Text">
+        <text x="52" y="348" font-family="Helvetica" font-size="16px" text-anchor="middle">Deep</text>
+      </g>
+      <g id="S-33b-Blue-Text">
         <text x="209" y="348" font-family="Helvetica" font-size="16px" text-anchor="middle">Blue</text>
       </g>
-      <g id="S-33b-Blue-Brain-Text">
-        <text x="209" y="348" font-family="Helvetica" font-size="16px" text-anchor="middle">Blue</text>
-        <text x="322" y="348" font-family="Helvetica" font-size="16px" text-anchor="middle">Brain</text>
+      <g id="S-33c-Brain-Text">
+        <text x="370" y="348" font-family="Helvetica" font-size="16px" text-anchor="middle">Brain</text>
       </g>
     </g>
     <g id="floor">
@@ -43,6 +47,8 @@
       <rect x="0" y="263" width="165" height="4.01" fill="#f5f5f5"/>
       <rect x="0" y="426.99" width="418" height="4.01" fill="#f5f5f5"/>
       <rect x="414" y="263" width="4.01" height="168" fill="#f5f5f5"/>
+      <rect x="314" y="293" width="4.01" height="138" fill="#f5f5f5"/>
+      <rect x="100" y="293" width="4.01" height="138" fill="#f5f5f5"/>
       <rect x="194" y="263" width="298" height="4.01" fill="#f5f5f5"/>
       <rect x="487.99" y="119.11" width="4.01" height="147.89" fill="#f5f5f5"/>
       <rect x="211" y="119.11" width="281" height="4.01" fill="#f5f5f5"/>
