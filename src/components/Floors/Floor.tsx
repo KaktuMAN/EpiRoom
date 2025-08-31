@@ -7,7 +7,7 @@ interface FloorProps {
   townData: Town;
   floor: number;
   setDialogOpen: (open: boolean) => void;
-  setDialogContent: (content: ReactElement) => void;
+  setDialogContent: (content: ReactElement<Element>) => void;
   sideDisplay: boolean;
 }
 

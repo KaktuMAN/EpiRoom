@@ -13,7 +13,7 @@ import {useRouter} from "next/router";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const townsPath = path.join(process.cwd(), `./public/towns`);
-  let towns: Town[] = [];
+  const towns: Town[] = [];
 
   try {
     fs.readdirSync(townsPath).map((town) => {
@@ -57,6 +57,6 @@ export default function TownSlector ({ towns }: {towns: Town[]}) {
   )
 }
 
-TownSlector.getLayout = function getLayout(page: ReactElement) {
+TownSlector.getLayout = function getLayout(page: ReactElement<Element>) {
   return <FullPage>{page}</FullPage>;
 }

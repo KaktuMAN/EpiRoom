@@ -9,7 +9,7 @@ import "@styles/rooms.css"
 import Head from "next/head";
 
 export type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode;
+  getLayout?: (page: ReactElement<Element>) => ReactNode;
 };
 
 type AppPropsWithLayout = AppProps & {

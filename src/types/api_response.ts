@@ -1,4 +1,4 @@
-interface APIResponse {
+export interface APIResponse {
   start: number,
   end: number,
   event_id: number,

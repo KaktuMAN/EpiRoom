@@ -6,7 +6,7 @@ import {formatTime, generateRoomContent} from "@scripts/dialogGenerator";
 interface RoomInformationsProps {
   room: Room;
   setDialogOpen: (open: boolean) => void;
-  setDialogContent: (content: ReactElement) => void;
+  setDialogContent: (content: ReactElement<Element>) => void;
 }
 
 const RoomInformations: FC<RoomInformationsProps> = ({room, setDialogOpen, setDialogContent}) => {

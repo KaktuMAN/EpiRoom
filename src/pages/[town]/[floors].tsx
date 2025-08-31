@@ -182,6 +182,6 @@ export default function FloorRender ({ townData }: FloorRenderProps) {
   )
 }
 
-FloorRender.getLayout = function getLayout(page: ReactElement) {
+FloorRender.getLayout = function getLayout(page: ReactElement<Element>) {
   return <FullPage>{page}</FullPage>;
 }

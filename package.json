@@ -2,6 +2,9 @@
   "name": "epirooms",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,22 +18,25 @@
     "@mui/icons-material": "^5.15.6",
     "@mui/material": "^5.14.11",
     "@types/uuid": "^9.0.8",
-    "next": "^14.0.4",
+    "next": "15.5.2",
     "next-pwa": "^5.6.0",
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",
     "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "@types/tailwindcss": "^3.1.0",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
     "autoprefixer": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest",
+    "eslint-config-next": "15.5.2",
     "postcss": "latest",
     "typescript": "latest"
+  },
+  "overrides": {
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9"
   }
 }

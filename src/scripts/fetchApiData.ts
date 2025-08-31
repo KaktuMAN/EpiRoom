@@ -1,6 +1,7 @@
 import { Activity } from "@customTypes/activity";
 import { Room } from "@customTypes/room"
 import { Town } from "@customTypes/town"
+import {APIResponse} from "@customTypes/api_response";
 
 /**
  * Store data from API response in room object
@@ -10,7 +11,7 @@ import { Town } from "@customTypes/town"
  */
 function storeDataMultipleRooms(rooms: Room[], originalActivity: Activity, roomsNames: string[]): void {
   roomsNames.forEach((roomName) => {
-    let room = rooms.find((room) => room.intra_name === roomName)
+    const room = rooms.find((room) => room.intra_name === roomName)
     if (!room) {
       console.error(`Room ${roomName} not found in rooms list.`);
       return;
@@ -40,15 +41,15 @@ export default function fetchApiData(townData: Town, setLoading: (loading: boole
       setLoading(false)
     })
 
-  let newRooms = townData.rooms
+  const newRooms = townData.rooms
 
   apiData.then((data: APIResponse[]) => {
     if (!data) return;
     setError(false)
     data.forEach((activityData: APIResponse) => {
       if (!activityData.room) return;
-      let room = newRooms.find((room) => room.intra_name === activityData.room);
-      let activity: Activity = {title: "", start: new Date(), end: new Date(), id: -1, active: false}
+      const room = newRooms.find((room) => room.intra_name === activityData.room);
+      const activity: Activity = {title: "", start: new Date(), end: new Date(), id: -1, active: false}
       
       activity.title = activityData.title?.replace("Réservation salle MSc - ", "")
       activity.start = new Date(activityData.start * 1000)
