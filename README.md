@@ -1,3 +1,7 @@
+# Archive
+
+This project has been archived and replaced by a closed-source alternative.
+
 ## EpiRoom
 
 This project is a web application that allows users to see the room availability at Epitech
